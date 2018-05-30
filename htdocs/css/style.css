@@ -88,6 +88,11 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
+.thumb {
+    max-width: 100px;
+    max-height: 100px;
+}
+
 
 
 /**

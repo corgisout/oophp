@@ -13,4 +13,4 @@ har alltid varit dålig på objektorienterad prograramering men hoppas att denna
 
 Länka till [dbwebb kursrepot på GitHub](https://github.com/dbwebb-se/oophp).
 
-Länka till [ditt eget repo för me/redovisa på GitHub](https://github.com/XXX/XXX).
+Länka till [ditt eget repo för me/redovisa på GitHub](https://github.com/corgisout/oophp).

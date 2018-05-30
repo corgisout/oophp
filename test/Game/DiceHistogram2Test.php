@@ -1,6 +1,8 @@
 <?php
 namespace sihd\Game;
+
 use PHPUnit\Framework\TestCase;
+
 /**
  * Test cases for class Guess.
  */

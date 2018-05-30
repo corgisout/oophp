@@ -1,4 +1,5 @@
 <?php
+
 namespace sihd\Game;
 
 class Dice

@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8cef51e93e29dbb81522b09882972fcd",
+    "content-hash": "c7e576283b31b1db23c25d027dfa2ab0",
     "packages": [
         {
             "name": "anax/common",
@@ -26,8 +26,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Anax\\": "src/",
-                    "sihd\\": "src/"
+                    "Anax\\": "src/"
                 },
                 "files": [
                     "src/functions.php"
@@ -103,17 +102,69 @@
             "time": "2018-03-16T14:47:26+00:00"
         },
         {
-            "name": "anax/di",
-            "version": "v1.0.9",
+            "name": "anax/database",
+            "version": "v1.1.10",
             "source": {
                 "type": "git",
-                "url": "https://github.com/canax/di.git",
-                "reference": "f60264fdb3676bb507e1caedb96cdbfe60b0c6a6"
+                "url": "https://github.com/canax/database.git",
+                "reference": "cae25768329ed2bbde2bea5a76262f0d6306dfa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/canax/di/zipball/f60264fdb3676bb507e1caedb96cdbfe60b0c6a6",
-                "reference": "f60264fdb3676bb507e1caedb96cdbfe60b0c6a6",
+                "url": "https://api.github.com/repos/canax/database/zipball/cae25768329ed2bbde2bea5a76262f0d6306dfa4",
+                "reference": "cae25768329ed2bbde2bea5a76262f0d6306dfa4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "anax/configure": "^1.0"
+            },
+            "suggest": {
+                "anax/configure": "To enhance integration with Anax framework."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Anax\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mikael Roos",
+                    "email": "mos@dbwebb.se",
+                    "homepage": "https://dbwebb.se",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Anax Database module.",
+            "homepage": "https://dbwebb.se/anax",
+            "keywords": [
+                "boilerplate",
+                "education",
+                "framework",
+                "micro",
+                "mvc"
+            ],
+            "time": "2018-04-25T06:14:06+00:00"
+        },
+        {
+            "name": "anax/di",
+            "version": "v1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/canax/di.git",
+                "reference": "2fd6ac6322bdbb8bdc62a5fbd9c69dffc94f1aaa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/canax/di/zipball/2fd6ac6322bdbb8bdc62a5fbd9c69dffc94f1aaa",
+                "reference": "2fd6ac6322bdbb8bdc62a5fbd9c69dffc94f1aaa",
                 "shasum": ""
             },
             "require": {
@@ -147,7 +198,7 @@
                 "micro",
                 "mvc"
             ],
-            "time": "2017-10-15T19:52:22+00:00"
+            "time": "2018-05-24T21:47:32+00:00"
         },
         {
             "name": "anax/page",
@@ -394,23 +445,23 @@
         },
         {
             "name": "anax/textfilter",
-            "version": "v1.0.2",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/canax/textfilter.git",
-                "reference": "0fe7b6839a86a2256d22b7f59d10ee92663f89f1"
+                "reference": "ee7d68673f7004357643d13c5f1d3a54e7b00177"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/canax/textfilter/zipball/0fe7b6839a86a2256d22b7f59d10ee92663f89f1",
-                "reference": "0fe7b6839a86a2256d22b7f59d10ee92663f89f1",
+                "url": "https://api.github.com/repos/canax/textfilter/zipball/ee7d68673f7004357643d13c5f1d3a54e7b00177",
+                "reference": "ee7d68673f7004357643d13c5f1d3a54e7b00177",
                 "shasum": ""
             },
             "require": {
-                "ezyang/htmlpurifier": "4.*",
-                "michelf/php-markdown": "1.6.*",
-                "michelf/php-smartypants": "1.6.*",
-                "php": ">=5.6",
+                "ezyang/htmlpurifier": "^4.0",
+                "michelf/php-markdown": "^1.6",
+                "michelf/php-smartypants": "^1.6",
+                "php": ">=7.0",
                 "scrivo/highlight.php": "^9.0"
             },
             "suggest": {
@@ -444,7 +495,7 @@
                 "micro",
                 "mvc"
             ],
-            "time": "2017-10-02T10:25:31+00:00"
+            "time": "2018-05-24T20:26:07+00:00"
         },
         {
             "name": "anax/url",
@@ -591,30 +642,25 @@
         },
         {
             "name": "michelf/php-markdown",
-            "version": "1.6.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/michelf/php-markdown.git",
-                "reference": "156e56ee036505ec637d761ee62dc425d807183c"
+                "reference": "01ab082b355bf188d907b9929cd99b2923053495"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/156e56ee036505ec637d761ee62dc425d807183c",
-                "reference": "156e56ee036505ec637d761ee62dc425d807183c",
+                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/01ab082b355bf188d907b9929cd99b2923053495",
+                "reference": "01ab082b355bf188d907b9929cd99b2923053495",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-lib": "1.4.x-dev"
-                }
-            },
             "autoload": {
-                "psr-0": {
-                    "Michelf": ""
+                "psr-4": {
+                    "Michelf\\": "Michelf/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -638,31 +684,26 @@
             "keywords": [
                 "markdown"
             ],
-            "time": "2015-12-24T01:37:31+00:00"
+            "time": "2018-01-15T00:49:33+00:00"
         },
         {
             "name": "michelf/php-smartypants",
-            "version": "1.6.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/michelf/php-smartypants.git",
-                "reference": "674badae316a957173c67dd3184e21cb6807d7fb"
+                "reference": "47d17c90a4dfd0ccf1f87e25c65e6c8012415aad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/michelf/php-smartypants/zipball/674badae316a957173c67dd3184e21cb6807d7fb",
-                "reference": "674badae316a957173c67dd3184e21cb6807d7fb",
+                "url": "https://api.github.com/repos/michelf/php-smartypants/zipball/47d17c90a4dfd0ccf1f87e25c65e6c8012415aad",
+                "reference": "47d17c90a4dfd0ccf1f87e25c65e6c8012415aad",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-lib": "1.6.x-dev"
-                }
-            },
             "autoload": {
                 "psr-0": {
                     "Michelf": ""
@@ -693,7 +734,7 @@
                 "typographer",
                 "typography"
             ],
-            "time": "2016-10-10T18:14:08+00:00"
+            "time": "2016-12-13T01:01:17+00:00"
         },
         {
             "name": "mos/cimage",
@@ -811,21 +852,77 @@
             "time": "2018-02-19T02:38:14+00:00"
         },
         {
-            "name": "symfony/yaml",
-            "version": "v3.4.9",
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "033cfa61ef06ee0847e056e530201842b6e926c3"
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/033cfa61ef06ee0847e056e530201842b6e926c3",
-                "reference": "033cfa61ef06ee0847e056e530201842b6e926c3",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
+                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8"
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "time": "2018-04-30T19:57:29+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v3.4.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "c5010cc1692ce1fa328b1fb666961eb3d4a85bb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/c5010cc1692ce1fa328b1fb666961eb3d4a85bb0",
+                "reference": "c5010cc1692ce1fa328b1fb666961eb3d4a85bb0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-ctype": "~1.8"
             },
             "conflict": {
                 "symfony/console": "<3.4"
@@ -866,7 +963,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-08T08:21:29+00:00"
+            "time": "2018-05-03T23:18:14+00:00"
         }
     ],
     "packages-dev": [],

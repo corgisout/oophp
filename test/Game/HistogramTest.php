@@ -1,10 +1,12 @@
 <?php
 namespace sihd\Game;
+
 use PHPUnit\Framework\TestCase;
+
 /**
  * Test cases for class Guess.
  */
-classHistogramTest extends TestCase
+class HistogramTest extends TestCase
 {
     /**
      * Construct object and verify that the object has the expected

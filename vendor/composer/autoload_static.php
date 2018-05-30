@@ -9,6 +9,7 @@ class ComposerStaticInit7f4b567590271a05a6441efd913687cf
     public static $files = array (
         '6b9cbd293adb7d895e163aebb2790539' => __DIR__ . '/..' . '/anax/common/src/functions.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'dfc9e5dd545737efbb98020db79bfa08' => __DIR__ . '/..' . '/mos/cimage/defines.php',
         '507fe79d3e285fab95fad400b8d42245' => __DIR__ . '/..' . '/mos/cimage/functions.php',
     );
@@ -20,7 +21,12 @@ class ComposerStaticInit7f4b567590271a05a6441efd913687cf
         ),
         'S' => 
         array (
+            'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Component\\Yaml\\' => 23,
+        ),
+        'M' => 
+        array (
+            'Michelf\\' => 8,
         ),
         'A' => 
         array (
@@ -33,24 +39,33 @@ class ComposerStaticInit7f4b567590271a05a6441efd913687cf
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
         'Symfony\\Component\\Yaml\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/yaml',
+        ),
+        'Michelf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/michelf/php-markdown/Michelf',
         ),
         'Anax\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
             1 => __DIR__ . '/..' . '/anax/common/src',
             2 => __DIR__ . '/..' . '/anax/configure/src',
-            3 => __DIR__ . '/..' . '/anax/di/src',
-            4 => __DIR__ . '/..' . '/anax/page/src',
-            5 => __DIR__ . '/..' . '/anax/request/src',
-            6 => __DIR__ . '/..' . '/anax/response/src',
-            7 => __DIR__ . '/..' . '/anax/router/src',
-            8 => __DIR__ . '/..' . '/anax/session/src',
-            9 => __DIR__ . '/..' . '/anax/textfilter/src',
-            10 => __DIR__ . '/..' . '/anax/url/src',
-            11 => __DIR__ . '/..' . '/anax/view/src',
+            3 => __DIR__ . '/..' . '/anax/database/src',
+            4 => __DIR__ . '/..' . '/anax/di/src',
+            5 => __DIR__ . '/..' . '/anax/page/src',
+            6 => __DIR__ . '/..' . '/anax/request/src',
+            7 => __DIR__ . '/..' . '/anax/response/src',
+            8 => __DIR__ . '/..' . '/anax/router/src',
+            9 => __DIR__ . '/..' . '/anax/session/src',
+            10 => __DIR__ . '/..' . '/anax/textfilter/src',
+            11 => __DIR__ . '/..' . '/anax/url/src',
+            12 => __DIR__ . '/..' . '/anax/view/src',
         ),
     );
 
@@ -59,8 +74,7 @@ class ComposerStaticInit7f4b567590271a05a6441efd913687cf
         array (
             'Michelf' => 
             array (
-                0 => __DIR__ . '/..' . '/michelf/php-markdown',
-                1 => __DIR__ . '/..' . '/michelf/php-smartypants',
+                0 => __DIR__ . '/..' . '/michelf/php-smartypants',
             ),
         ),
         'H' => 

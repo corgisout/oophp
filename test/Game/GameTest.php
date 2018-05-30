@@ -1,6 +1,8 @@
 <?php
 namespace sihd\Game;
+
 use PHPUnit\Framework\TestCase;
+
 /**
  * Test cases for class Guess.
  */
@@ -44,5 +46,4 @@ class GameTest extends TestCase
         $this->assertEquals(20, array_sum($res[0]));
         $this->assertEquals(45, array_sum($res[1]));
     }
-
 }

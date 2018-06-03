@@ -40,3 +40,31 @@ Kmom02
 
 <h2>TIL</h2>
 <p>hur man kan använda phpDocumentor för att skapa en bra dokumentation över allt som finns i ett projekt.</p>
+
+
+Kmom03
+-------------------------
+
+<h2>Har du tidigare erfarenheter av att skriva kod som testar annan kod?</h2>
+<p>Nej det har jag inte men det var väldigt kul att lära sig om det. Det känns som en sak som kommer vara väldigt viktigt om jag någon gång ska jobba med webb</p>
+
+<h2>Hur ser du på begreppen enhetstestning och att skriva testbar kod?</h2>
+<p>Begreppet enhetstestning ser jag som ett säkert sätt att testa så koden och funktionerna fungerar på det sättet som utvecklaren har tänkt.
+Det kan kännas onödigt att skriva enhets tester då det blir mycket mer arbete men när du jobbar på större projekt kan jag se att det är väldigt användbart.</p>
+
+<h2>Förklara kort begreppen white/grey/black box testing samt positiva och negativa tester, med dina egna ord.</h2>
+<p>White box testning är när den som utför testningen har full tillgång till all kod. Fördelen med dettaär att man kan kontrollera att all kod fungerar och du kan mäta kodteckningen.
+
+gray box är när du är mellan black box och whitebox.
+
+black box är motsatsen till whitebox. med detta kan det bli svårt att testa större saker men man kan alltid testa enskilda funktioner.
+
+positivs tester kontrolleraatt koden gör det den ska medans negativa tester kontrolerar felhantering vid exceptions
+</p>
+
+<h2>Hur gick det att genomföra uppgifterna med enhetstester, använde du egna klasser som bas för din testning?</h2>
+<p>Det började lite sisådär då jag inte riktigt förstod mig på hur dom skulle skrivas. efter att ha skrivit några dock släppte det och allt fungerade fin fint.
+jag använde inte egna klasser som utan dom som följde med. Det kändes enklare för mig.</p>
+
+<h2>Vilken är din TIL för detta kmom?</h2>
+<p>mitt TIL för deta kursmoment är hur användbart enhetstester kan vara för att se till att allt faktist funkar som det ska.</p>

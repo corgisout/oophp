@@ -68,3 +68,27 @@ jag använde inte egna klasser som utan dom som följde med. Det kändes enklare
 
 <h2>Vilken är din TIL för detta kmom?</h2>
 <p>mitt TIL för deta kursmoment är hur användbart enhetstester kan vara för att se till att allt faktist funkar som det ska.</p>
+
+
+Kmom04
+-------------------------
+
+<h2>Vilka är dina tankar och funderingar kring trait och interface?</h2>
+<p>Jag tycker uppgiften i sig gick väldigt bra, problemet jag har dock är att jag kände att uppgiften förklarade dåligt varför jag skulle använda det
+och vilka fördelar dom för med sig.</p>
+
+<h2>Hur gick det att skapa intelligensen och taktiken till tärningsspelet, hur gjorde du?</h2>
+<p></p>
+
+<h2>Hur gick det att skapa intelligensen och taktiken till tärningsspelet, hur gjorde du?</h2>
+<p>min intiligens är inte den bästa men den funkar. Den fungerar genom en if sats som säger att om den har under 15 poäng så kommer den rulla.</p>
+
+<h2>Några reflektioner från att integrera hårdare in i ramverkets klasser och struktur?</h2>
+<p>Jag tycker att det är skönt eller det ser i alla fall finare ut. dock vet jag inte riktigt vad skillnaden är men att använda ett ramverks alla fördelar känns ju bra</p>
+
+<h2>Berätta hur väl du lyckades med make test inuti ramverket och hur väl du lyckades att testa din kod med enhetstester och vilken kodtäckning du fick.</h2>
+<p>Jag känner att jag lyckades helt okej, jag fick upp 68 % function coverage. det är ju inte 100 så kunde ju varit bättre men jag känner mig endå rätt nöjd.
+att göra tester i ramverket känns inte annrolunda från att göra det utanför tycker jag.</p>
+
+<h2>>Vilken är din TIL för detta kmom?</h2>
+<p>min TIL detta kmom är hur enkelt det kan vara att skapa en liten egen AI även om den är extremt simpel</p>

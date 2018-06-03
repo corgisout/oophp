@@ -11,9 +11,8 @@ class Game
     private $roundPoints;
     private $gamestatus;
     private $serie;
-    /**
-     * Constructor to initiate the dice with six number of sides.
-     */
+
+
     public function __construct($session_game, $roundPoints)
     {
         if ($session_game == null) {
@@ -86,13 +85,16 @@ class Game
         $count = 0;
         $points = 0;
         $ones = 0;
-        while($count < 2) {
+        while($points < 15){
+            $dices = array();
+            $dice = new DiceHistogram2();
             $dice = new Dice();
             $value = $dice->roll();
             if($value == 1){
                 $points= 0;
                 break;
             }
+
             $points += $value;
             $count++;
         }

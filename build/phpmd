@@ -1,0 +1,32 @@
+
+Warning: md5_file(C:\cyg\home\simon\xampp\htdocs\dbwebb-kurser\oophp\me\redovisaa\vendor\scrivo\highlight.php): failed to open stream: Permission denied in phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/vendor/pdepend/pdepend/src/main/php/PDepend/Source/Language/PHP/AbstractPHPParser.php on line 342
+
+Call Stack:
+    0.2095     382832   1. {main}() C:\cyg\home\simon\xampp\htdocs\dbwebb-kurser\oophp\me\redovisaa\.bin\phpmd:0
+    0.2413     666664   2. PHPMD\TextUI\Command::main() C:\cyg\home\simon\xampp\htdocs\dbwebb-kurser\oophp\me\redovisaa\.bin\phpmd:19
+    0.2432     785064   3. PHPMD\TextUI\Command->run() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/src/main/php/PHPMD/TextUI/Command.php:173
+    0.2441     819656   4. PHPMD\PHPMD->processFiles() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/src/main/php/PHPMD/TextUI/Command.php:132
+    0.3099    2734000   5. PHPMD\Parser->parse() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/src/main/php/PHPMD/PHPMD.php:222
+    0.3099    2734224   6. PDepend\Engine->analyze() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/src/main/php/PHPMD/Parser.php:123
+    0.3131    3026096   7. PDepend\Engine->performParseProcess() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/vendor/pdepend/pdepend/src/main/php/PDepend/Engine.php:323
+   71.6691   16956768   8. PDepend\Source\Language\PHP\PHPParserGeneric->parse() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/vendor/pdepend/pdepend/src/main/php/PDepend/Engine.php:575
+   71.6691   16956800   9. md5_file() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/vendor/pdepend/pdepend/src/main/php/PDepend/Source/Language/PHP/AbstractPHPParser.php:342
+
+
+Warning: file_get_contents(C:\cyg\home\simon\xampp\htdocs\dbwebb-kurser\oophp\me\redovisaa\vendor\scrivo\highlight.php): failed to open stream: Permission denied in phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/vendor/pdepend/pdepend/src/main/php/PDepend/Source/AST/ASTCompilationUnit.php on line 356
+
+Call Stack:
+    0.2095     382832   1. {main}() C:\cyg\home\simon\xampp\htdocs\dbwebb-kurser\oophp\me\redovisaa\.bin\phpmd:0
+    0.2413     666664   2. PHPMD\TextUI\Command::main() C:\cyg\home\simon\xampp\htdocs\dbwebb-kurser\oophp\me\redovisaa\.bin\phpmd:19
+    0.2432     785064   3. PHPMD\TextUI\Command->run() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/src/main/php/PHPMD/TextUI/Command.php:173
+    0.2441     819656   4. PHPMD\PHPMD->processFiles() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/src/main/php/PHPMD/TextUI/Command.php:132
+    0.3099    2734000   5. PHPMD\Parser->parse() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/src/main/php/PHPMD/PHPMD.php:222
+    0.3099    2734224   6. PDepend\Engine->analyze() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/src/main/php/PHPMD/Parser.php:123
+    0.3131    3026096   7. PDepend\Engine->performParseProcess() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/vendor/pdepend/pdepend/src/main/php/PDepend/Engine.php:323
+   71.6691   16956768   8. PDepend\Source\Language\PHP\PHPParserGeneric->parse() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/vendor/pdepend/pdepend/src/main/php/PDepend/Engine.php:575
+   71.6743   16957304   9. PDepend\Source\Language\PHP\PHPTokenizerInternal->peek() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/vendor/pdepend/pdepend/src/main/php/PDepend/Source/Language/PHP/AbstractPHPParser.php:357
+   71.6743   16957304  10. PDepend\Source\Language\PHP\PHPTokenizerInternal->tokenize() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/vendor/pdepend/pdepend/src/main/php/PDepend/Source/Language/PHP/PHPTokenizerInternal.php:616
+   71.6743   16957304  11. PDepend\Source\AST\ASTCompilationUnit->getSource() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/vendor/pdepend/pdepend/src/main/php/PDepend/Source/Language/PHP/PHPTokenizerInternal.php:702
+   71.6743   16957304  12. PDepend\Source\AST\ASTCompilationUnit->readSource() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/vendor/pdepend/pdepend/src/main/php/PDepend/Source/AST/ASTCompilationUnit.php:200
+   71.6743   16957304  13. file_get_contents() phar://C:/cyg/home/simon/xampp/htdocs/dbwebb-kurser/oophp/me/redovisaa/.bin/phpmd/vendor/pdepend/pdepend/src/main/php/PDepend/Source/AST/ASTCompilationUnit.php:356
+

@@ -170,7 +170,6 @@ class HTMLPurifier_LanguageFactory
 
         // load fallback localisation
         if (!empty($fallback)) {
-
             // infinite recursion guard
             if (isset($languages_seen[$code])) {
                 trigger_error(

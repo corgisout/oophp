@@ -51,12 +51,14 @@ class Histogram
     {
         $str = "";
         $counts = array_count_values($this->serie);
-        for($i = ($this->min !== null ? $this->min : 1); $i <= ($this->max !== null ? $this->max : 6);$i++) {
-            if(isset($counts[$i]) || ($this->min !== null && $this->max !== null)) {
+
+        for ($i = ($this->min !== null ? $this->min : 1); $i <= ($this->max !== null ? $this->max : 6); $i++) {
+            if (isset($counts[$i]) || ($this->min !== null && $this->max !== null)) {
                 $str .= $i . " ";
-                for ($j = 0;(isset($counts[$i]) && $j < $counts[$i]); $j++)
+                for ($j = 0; (isset($counts[$i]) && $j < $counts[$i]); $j++) {
                     $str .= "*";
-                    $str .= "<br>";
+                }
+                $str .= "<br>";
             }
         }
         return $str;

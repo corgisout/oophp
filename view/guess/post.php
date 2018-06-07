@@ -15,7 +15,7 @@ namespace Anax\View;
 
 <h1><?= $title ?></h1>
 <p> guess a number between 1-100</p>
-<form method="GET">
+<form method="POST">
     <input name="number" value="<?= $game->number()?>" type="hidden">
     <input name="tries" value ="<?= $game->tries()?>" type="hidden">
     <input name="guess" value="<?=$guess?>" type="text">

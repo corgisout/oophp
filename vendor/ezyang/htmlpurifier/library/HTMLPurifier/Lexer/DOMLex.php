@@ -178,7 +178,7 @@ class HTMLPurifier_Lexer_DOMLex extends HTMLPurifier_Lexer
         if ($node->nodeType === XML_TEXT_NODE) {
             $data = $this->getData($node); // Handle variable data property
             if ($data !== null) {
-              $tokens[] = $this->factory->createText($data);
+                $tokens[] = $this->factory->createText($data);
             }
             return false;
         } elseif ($node->nodeType === XML_CDATA_SECTION_NODE) {
@@ -317,9 +317,11 @@ class HTMLPurifier_Lexer_DOMLex extends HTMLPurifier_Lexer
         $ret .= '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
         // No protection if $html contains a stray </div>!
         $ret .= '</head><body>';
-        if ($use_div) $ret .= '<div>';
+        if ($use_div) { $ret .= '<div>';
+        }
         $ret .= $html;
-        if ($use_div) $ret .= '</div>';
+        if ($use_div) { $ret .= '</div>';
+        }
         $ret .= '</body></html>';
         return $ret;
     }

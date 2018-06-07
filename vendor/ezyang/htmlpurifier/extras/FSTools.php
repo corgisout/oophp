@@ -17,7 +17,8 @@ class FSTools
      */
     public static function singleton()
     {
-        if (empty(FSTools::$singleton)) FSTools::$singleton = new FSTools();
+        if (empty(FSTools::$singleton)) { FSTools::$singleton = new FSTools();
+        }
         return FSTools::$singleton;
     }
 
@@ -39,8 +40,8 @@ class FSTools
     {
         $folders = preg_split("#[\\\\/]#", $folder);
         $base = '';
-        for($i = 0, $c = count($folders); $i < $c; $i++) {
-            if(empty($folders[$i])) {
+        for ($i = 0, $c = count($folders); $i < $c; $i++) {
+            if (empty($folders[$i])) {
                 if (!$i) {
                     // special case for root level
                     $base .= DIRECTORY_SEPARATOR;
@@ -48,7 +49,7 @@ class FSTools
                 continue;
             }
             $base .= $folders[$i];
-            if(!is_dir($base)){
+            if (!is_dir($base)) {
                 $this->mkdir($base);
             }
             $base .= DIRECTORY_SEPARATOR;
@@ -72,7 +73,7 @@ class FSTools
         }
         // Loop through the folder
         $dir = $this->dir($source);
-        while ( false !== ($entry = $dir->read()) ) {
+        while (false !== ($entry = $dir->read())) {
             // Skip pointers
             if ($entry == '.' || $entry == '..') {
                 continue;
@@ -136,12 +137,14 @@ class FSTools
     /**
      * Recursively globs a directory.
      */
-    public function globr($dir, $pattern, $flags = NULL)
+    public function globr($dir, $pattern, $flags = null)
     {
         $files = $this->glob("$dir/$pattern", $flags);
-        if ($files === false) $files = array();
+        if ($files === false) { $files = array();
+        }
         $sub_dirs = $this->glob("$dir/*", GLOB_ONLYDIR);
-        if ($sub_dirs === false) $sub_dirs = array();
+        if ($sub_dirs === false) { $sub_dirs = array();
+        }
         foreach ($sub_dirs as $sub_dir) {
             $sub_files = $this->globr($sub_dir, $pattern, $flags);
             $files = array_merge($files, $sub_files);
@@ -158,7 +161,6 @@ class FSTools
     {
         return call_user_func_array($name, $args);
     }
-
 }
 
 // vim: et sw=4 sts=4

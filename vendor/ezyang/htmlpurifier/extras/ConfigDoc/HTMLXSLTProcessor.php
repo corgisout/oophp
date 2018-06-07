@@ -13,7 +13,8 @@ class ConfigDoc_HTMLXSLTProcessor
 
     public function __construct($proc = false)
     {
-        if ($proc === false) $proc = new XSLTProcessor();
+        if ($proc === false) { $proc = new XSLTProcessor();
+        }
         $this->xsltProcessor = $proc;
     }
 
@@ -85,7 +86,6 @@ class ConfigDoc_HTMLXSLTProcessor
     {
         call_user_func_array(array($this->xsltProcessor, $name), $arguments);
     }
-
 }
 
 // vim: et sw=4 sts=4

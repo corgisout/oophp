@@ -1,7 +1,7 @@
 <?php
-namespace sihd\pageorpost;
+namespace sihd\PageOrPost;
 
-class pageorpost
+class PageOrPost
 {
     private $database;
 
@@ -11,7 +11,7 @@ class pageorpost
             $content['path'] = null;
         }
         if ($this->checkSlug($content['slug'], 0) == true) {
-            $sql = "INSERT INTO content (title, type, path, slug, data, filter) VALUES(?, ?, ?, ?, ?, ?);";
+            $sql = "INSERT INTO CMS (title, type, path, slug, data, filter) VALUES(?, ?, ?, ?, ?, ?);";
 
             $params = [$content['title'], $content['type'], $content['path'], $content['slug'], $content['data'], $content['filter']];
             $content = $this->database->executeFetchAll($sql, $params);
@@ -28,7 +28,7 @@ class pageorpost
 
     public function checkSlug($arg, $id)
     {
-        $sql = "SELECT * FROM content WHERE slug = ?;";
+        $sql = "SELECT * FROM CMS WHERE slug = ?;";
         $params = [$arg];
         $res = $this->database->executeFetchAll($sql, $params);
 
@@ -41,12 +41,11 @@ class pageorpost
         }
 
         return $status;
-
     }
 
     public function getContent($type, $arg)
     {
-        $sql = "SELECT * FROM content WHERE path = ? OR slug = ? AND type = ?;";
+        $sql = "SELECT * FROM CMS WHERE path = ? OR slug = ? AND type = ?;";
         $params = [$arg, $arg, $type];
         $content = $this->database->executeFetchAll($sql, $params);
 
@@ -71,7 +70,7 @@ class pageorpost
             $content['path'] = null;
         }
         if ($this->checkSlug($content['slug'], $content['id']) == true) {
-            $sql = "UPDATE content SET path = ?, slug = ?, title = ?, data = ?, type = ?, filter = ?, published = ?, created = ?, updated = ?, deleted = ? WHERE id = ?;";
+            $sql = "UPDATE CMS SET path = ?, slug = ?, title = ?, data = ?, type = ?, filter = ?, published = ?, created = ?, updated = ?, deleted = ? WHERE id = ?;";
 
             $params = [$content['path'], $content['slug'], $content['title'], $content['data'], $content['type'], $content['filter'], $content['published'], $content['created'], $content['updated'], $content['deleted'], $content['id']];
             $content = $this->database->executeFetchAll($sql, $params);
@@ -80,12 +79,11 @@ class pageorpost
         } else {
             return false;
         }
-
     }
 
     public function deleteContent($id)
     {
-        $sql = "DELETE FROM content WHERE id = ? LIMIT 1;";
+        $sql = "DELETE FROM CMS WHERE id = ? LIMIT 1;";
         $params = [$id];
         $this->database->executeFetchAll($sql, $params);
     }

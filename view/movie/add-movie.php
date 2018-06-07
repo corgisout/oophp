@@ -1,7 +1,6 @@
 <?php
 namespace Anax\View;
 
-
 include('movies-navbar.php');
 ?>
 <h2>Add movie</h2>

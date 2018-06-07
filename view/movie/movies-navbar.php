@@ -1,5 +1,6 @@
 <?php
 namespace Anax\View;
+
 ?>
 <div class="sub-navbar">
 <a href="<?= url('movies/movies') ?>">All movies</a>

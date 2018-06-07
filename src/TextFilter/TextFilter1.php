@@ -1,5 +1,6 @@
 <?php
 namespace sihd\TextFilter;
+
 /**
  * Filter and format text content.
  */
@@ -82,7 +83,7 @@ class TextFilter1
      */
     private function markdown($text)
     {
-        return \Michelf\Markdown::defaultTransform($text);
+        return \Michelf\MarkdownExtra::defaultTransform($text);
     }
     /**
      * For convenience access to nl2br formatting of text.

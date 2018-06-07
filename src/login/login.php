@@ -1,8 +1,10 @@
 <?php
 namespace sihd\login;
 
-class Login{
-    public function __construct($app){
+class Login
+{
+    public function __construct($app)
+    {
         $this->database = $app->db->connect();
     }
 
@@ -15,24 +17,26 @@ class Login{
         }
     }
 
-    public function login($username, $password){
+    public function login($username, $password)
+    {
         $sql = "SELECT username FROM login WHERE username = ? AND password = ?";
         $res = $this->fetch($sql, [$username, $password]);
-        if(count($res) > 0){
+        if (count($res) > 0) {
             $_SESSION['isLogged'] = true;
             header('Location: login');
             exit;
-        } else{
+        } else {
             return false;
         }
         return false;
     }
         //Classen Login
-    public function logout() {
-        if(isset($_SESSION['isLogged']))
+    public function logout()
+    {
+        if (isset($_SESSION['isLogged'])) {
             unset($_SESSION['isLogged']);
+        }
         header('Location: login');
         exit;
     }
-
 }

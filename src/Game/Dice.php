@@ -8,15 +8,18 @@ class Dice
     private $rolls;
 
 
-    public function __construct(int $sides = 6) {
+    public function __construct(int $sides = 6)
+    {
         $this->sides = $sides;
         $this->rolls = [];
     }
-    public function roll() {
+    public function roll()
+    {
         $this->rolls[] = rand(1, $this->sides);
         return end($this->rolls);
     }
-    public function getLastRoll() {
+    public function getLastRoll()
+    {
         return end($this->rolls);
     }
 }

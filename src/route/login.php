@@ -1,5 +1,6 @@
 <?php
 namespace sihd\login;
+
 /**
  * Show all movies.
  */
@@ -22,9 +23,11 @@ $app->router->post("login/login", function () use ($app) {
 
     if ($app->request->getPost("username") && $app->request->getPost("password")) {
         $login = new Login($app);
-        $res = $login->login($app->request->getPost("username") , $app->request->getPost("password"));
-        if(!$res) $data['loginError'] = "Username or password is wrong.";
-    } else{
+        $res = $login->login($app->request->getPost("username"), $app->request->getPost("password"));
+        if (!$res) {
+            $data['loginError'] = "Username or password is wrong.";
+        }
+    } else {
         $data['loginError'] = "Username or password not set.";
     }
 
@@ -32,7 +35,7 @@ $app->router->post("login/login", function () use ($app) {
     $app->page->render($data);
 });
 
-$app->router->any(["GET", "POST"], 'login/logout', function() use ($app) {
+$app->router->any(["GET", "POST"], 'login/logout', function () use ($app) {
     session_start();
     $login = new Login($app);
     $login->logout();

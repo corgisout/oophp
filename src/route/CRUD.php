@@ -7,7 +7,7 @@ $app->router->get("crud/show-all", function () use ($app) {
     ];
 
     $content = new sihd\CMS\Content($app);
-    $data['res'] = $content->fetch("SELECT * FROM content;");
+    $data['res'] = $content->fetch("SELECT * FROM CMS;");
 
     $app->view->add("crud/show-all", $data);
     $app->page->render($data);
@@ -20,7 +20,7 @@ $app->router->get("crud/edit", function () use ($app) {
     ];
 
     $content = new sihd\CMS\Content($app);
-    $sql = "SELECT * FROM content WHERE id = ?;";
+    $sql = "SELECT * FROM CMS WHERE id = ?;";
     $params = [$_GET["id"]];
 
     $data['res'] = $content->fetch($sql, $params);
@@ -34,7 +34,7 @@ $app->router->get("crud/slug", function () use ($app) {
     $data = [
         "title" => "Edit | oophp",
     ];
-    $content = new sihd\PagePost\PagePost();
+    $content = new sihd\PageOrPost\PageOrPost();
     $content->connect($app);
     $content->checkSlug("blogpost-3");
 
@@ -43,7 +43,7 @@ $app->router->get("crud/slug", function () use ($app) {
 });
 
 $app->router->post("crud/edit", function () use ($app) {
-    $content = new sihd\PageOrPost\pageorpost();
+    $content = new sihd\PageOrPost\PageOrPost();
     $content->connect($app);
 
     $status = $content->editContent($_POST);
@@ -57,13 +57,12 @@ $app->router->post("crud/edit", function () use ($app) {
 });
 
 $app->router->get("crud/delete", function () use ($app) {
-    $content = new sihd\PageOrPost\pageorpost();
+    $content = new sihd\PageOrPost\PageOrPost();
     $content->connect($app);
     $id = $_GET['id'];
     $status = $content->deleteContent($id);
     header('Location: show-all?status=deleted');
     exit;
-
 });
 
 $app->router->get("crud/create", function () use ($app) {
@@ -77,7 +76,7 @@ $app->router->get("crud/create", function () use ($app) {
 });
 
 $app->router->post("crud/create", function () use ($app) {
-    $content = new sihd\PageOrPost\pageorpost();
+    $content = new sihd\PageOrPost\PageOrPost();
     $content->connect($app);
 
     $status = $content->createContent($_POST);

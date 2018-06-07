@@ -25,7 +25,6 @@ class GameTest extends TestCase
         $this->assertInstanceOf("\sihd\Game\Game", $game);
         $exp = 12;
         $this->assertEquals($exp, $game->getRoundPoints());
-
     }
 
     public function testTakePoints()

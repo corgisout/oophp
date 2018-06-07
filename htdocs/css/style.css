@@ -57,7 +57,7 @@ body {
 .outer-wrap-navbar {
     max-width: 100%;
     min-height: 2em;
-    background-color: #000000;
+    background-color: #000;
     color: #fff;
     padding: 0.5em 0;
 }

@@ -79,7 +79,6 @@ class HTMLPurifier_AttrValidator
         // iterate through all the attribute keypairs
         // Watch out for name collisions: $key has previously been used
         foreach ($attr as $attr_key => $value) {
-
             // call the definition
             if (isset($defs[$attr_key])) {
                 // there is a local definition defined
@@ -169,10 +168,7 @@ class HTMLPurifier_AttrValidator
         if (!$current_token) {
             $context->destroy('CurrentToken');
         }
-
     }
-
-
 }
 
 // vim: et sw=4 sts=4

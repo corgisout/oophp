@@ -1,5 +1,6 @@
 <?php
 use sihd\Game\Game as Game;
+
 /**
  * App specific routes.
  */
@@ -9,7 +10,7 @@ $app->router->any(["GET", "POST"], "dice100", function () use ($app) {
     $res = array();
     $roll = 0;
 
-        if ($app->request->getPost("reset") !== null) {
+    if ($app->request->getPost("reset") !== null) {
         $app->session->set("game", null);
         $app->session->set("round", null);
         $app->session->set("values", array());
@@ -17,7 +18,7 @@ $app->router->any(["GET", "POST"], "dice100", function () use ($app) {
 
     $game = new Game($app->session->get("game"), $app->session->get("round"));
 
-     if ($app->request->getPost("take") !== null) {
+    if ($app->request->getPost("take") !== null) {
         $game->takePoints();
     }
 
@@ -41,17 +42,16 @@ $app->router->any(["GET", "POST"], "dice100", function () use ($app) {
     $_SESSION["game"] = $gamememory;
     $_SESSION["round"] = $roundPoints;
 
-$data = [
-    "title" => "Tärningsspel 100",
-    "totalpoints" => $totalpoints,
-    "playertotal" => $playertotal,
-    "computertotal" => $computertotal,
-    "roundPoints" => $roundPoints,
-    "roll" => $roll,
-    "gamestatus" => $gamestatus,
-    "res" => $res
-
-];
-$app->view->add("dice100/dice100", $data);
-$app->page->render($data);
+    $data = [
+        "title" => "Tärningsspel 100",
+        "totalpoints" => $totalpoints,
+        "playertotal" => $playertotal,
+        "computertotal" => $computertotal,
+        "roundPoints" => $roundPoints,
+        "roll" => $roll,
+        "gamestatus" => $gamestatus,
+        "res" => $res
+    ];
+    $app->view->add("dice100/dice100", $data);
+    $app->page->render($data);
 });

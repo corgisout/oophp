@@ -107,7 +107,6 @@ class ComposerStaticInit7f4b567590271a05a6441efd913687cf
             $loader->prefixDirsPsr4 = ComposerStaticInit7f4b567590271a05a6441efd913687cf::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit7f4b567590271a05a6441efd913687cf::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit7f4b567590271a05a6441efd913687cf::$classMap;
-
         }, null, ClassLoader::class);
     }
 }

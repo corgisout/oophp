@@ -15,7 +15,7 @@ $defaultRoute = "?route=show-all-sort&"
     </tr>
 <?php $id = -1; foreach ($resultset as $row) :
     $id++;
-?>
+    ?>
     <tr>
         <td><?= $id ?></td>
         <td><?= $row->id ?></td>

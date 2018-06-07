@@ -16,7 +16,6 @@ $gravatarImage = "//www.gravatar.com/avatar/$gravatar?r=pg&amp;s=40&amp;d=wavata
         </span>
 
     <?php else : ?>
-
 <!--
         <span class="logout"><a href="/forum/ucp.php?mode=logout">Logout</a></span>
 

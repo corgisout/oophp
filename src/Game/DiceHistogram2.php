@@ -32,10 +32,11 @@ class DiceHistogram2 extends Dice implements HistogramInterface
      */
     public function roll()
     {
-        $this->serie[] = rand(1,6);
+        $this->serie[] = rand(1, 6);
         return $this->getLastRoll();
     }
-    public function setSerie($serie){
+    public function setSerie($serie)
+    {
         $this->serie= $serie;
     }
 }

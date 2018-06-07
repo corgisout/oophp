@@ -21,7 +21,7 @@ class Content
 
     public function getPosts()
     {
-        $sql = "SELECT * FROM content WHERE type = 'post';";
+        $sql = "SELECT * FROM CMS WHERE type = 'post';";
         return $this->database->executeFetchAll($sql);
     }
 }

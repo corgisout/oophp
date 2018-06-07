@@ -1,5 +1,6 @@
 <?php
 namespace sihd\Movie;
+
 /**
  * Class for interacting with database oophp with movies
  */

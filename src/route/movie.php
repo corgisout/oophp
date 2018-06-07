@@ -1,5 +1,6 @@
 <?php
 namespace sihd\Movie;
+
 /**
  * Show all movies.
  */

@@ -1,7 +1,6 @@
 <?php
 namespace Anax\View;
 
-
 include('movies-navbar.php');
 $route = "?searchTitle=" . $_GET['searchTitle'] . "&";
 ?>

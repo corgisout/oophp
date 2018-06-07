@@ -26,7 +26,7 @@
     <?php endif; ?>
     <?php
         $dice = new \sihd\Game\DiceHistogram2();
-        $dice->setSerie($_SESSION["values"]);
+        $dice->setSerie($_SESSION["values"] ?? array());
         $histogram = new \sihd\Game\Histogram();
         $histogram->injectData($dice);
     ?>

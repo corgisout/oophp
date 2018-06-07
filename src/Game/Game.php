@@ -21,14 +21,12 @@ class Game
             $this->roundPoints = $roundPoints;
             $this->gamestatus = "playerturn";
             $this->serie = array();
-
         } else {
             $this->playerPoints = $session_game[0];
             $this->aiPoints = $session_game[1];
             $this->roundPoints = $roundPoints;
             $this->gamestatus = "playerturn";
         }
-
     }
     public function getGameStatus()
     {
@@ -63,7 +61,7 @@ class Game
         $dices = array();
         $dice = new Dice();
 
-        for ($i = 0; $i < 2; $i++){
+        for ($i = 0; $i < 2; $i++) {
             $value = $dice->roll();
             $dices[] = $value;
             $_SESSION['values'][] = $value;
@@ -85,12 +83,12 @@ class Game
         $count = 0;
         $points = 0;
         $ones = 0;
-        while($points < 15){
+        while ($points < 15) {
             $dices = array();
             $dice = new DiceHistogram2();
             $dice = new Dice();
             $value = $dice->roll();
-            if($value == 1){
+            if ($value == 1) {
                 $points= 0;
                 break;
             }
@@ -117,5 +115,4 @@ class Game
         $this->roundPoints = 0;
         $_SESSION['values'] = array();
     }
-
 }

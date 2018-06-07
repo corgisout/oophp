@@ -11,7 +11,7 @@ $app->router->get("content/start", function () use ($app) {
 $app->router->get("page/{arg}", function ($arg) use ($app) {
     $content = new sihd\CMS\Content($app);
     $filter = new sihd\TextFilter\TextFilter1();
-    $page = new sihd\PageOrPost\pageorpost();
+    $page = new sihd\PageOrPost\PageOrPost();
     $page->connect($app);
     $pagedata = $page->getContent("page", $arg, $app);
     $data = [
@@ -25,7 +25,7 @@ $app->router->get("page/{arg}", function ($arg) use ($app) {
 $app->router->get("post/{arg}", function ($arg) use ($app) {
 
     $filter = new sihd\TextFilter\TextFilter1();
-    $page = new sihd\PageORPost\pageorpost();
+    $page = new sihd\PageOrPost\PageOrPost();
     $page->connect($app);
     $pagedata = $page->getContent("post", $arg, $app);
     $data = [
@@ -40,7 +40,7 @@ $app->router->get("post/{arg}", function ($arg) use ($app) {
 $app->router->get("blogposts", function () use ($app) {
     $content = new sihd\CMS\Content($app);
     $filter = new sihd\TextFilter\TextFilter1();
-    $page = new sihd\PageOrPost\pageorpost();
+    $page = new sihd\PageOrPost\PageOrPost();
     $posts = $content->getPosts();
     foreach ($posts as $post) {
         $post->filter = $page->createArrayOfFilters($post->filter);

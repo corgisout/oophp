@@ -30,7 +30,7 @@ $app->router->get("gissa/get", function () use ($app) {
     }
 
     $res = null;
-    if (isset($_GET["doGuess"])){
+    if (isset($_GET["doGuess"])) {
         $res = $game->makeGuess($guess);
     }
 
@@ -53,33 +53,33 @@ $app->router->any(["GET", "POST"], "gissa/session", function () use ($app) {
     ];
 
         //incoming POST data
-        $guess = isset($_POST["guess"]) ? $_POST["guess"] : null;
-        //get the game if exists or create a new game
-        if (isset($_SESSION["game"])) {
-            $game = $_SESSION["game"];
-        } else {
-            $game = new \sihd\Guess\Guess();
-            $_SESSION["game"] = $game;
-        }
-        // Reset the game.
-        if (isset($_POST["reset"]) || isset($_GET["reset"])) {
-            $game->random();
-            $_SESSION["game"] = null;
-            header("Location: session");
-            exit;
-        }
-        // Do a guess
-        $res = null;
-        if (isset($_POST["doGuess"])) {
-            $res = $game->makeGuess($guess);
-            $_SESSION["game"] = $game;
-        }
+    $guess = isset($_POST["guess"]) ? $_POST["guess"] : null;
+    //get the game if exists or create a new game
+    if (isset($_SESSION["game"])) {
+        $game = $_SESSION["game"];
+    } else {
+        $game = new \sihd\Guess\Guess();
+        $_SESSION["game"] = $game;
+    }
+    // Reset the game.
+    if (isset($_POST["reset"]) || isset($_GET["reset"])) {
+        $game->random();
+        $_SESSION["game"] = null;
+        header("Location: session");
+        exit;
+    }
+    // Do a guess
+    $res = null;
+    if (isset($_POST["doGuess"])) {
+        $res = $game->makeGuess($guess);
+        $_SESSION["game"] = $game;
+    }
 
     //prepare data
     $data["game"] = $game;
     $data["res"] = $res;
     $data["guess"] = $guess;
     //add view and render page
-    $app->view->add("guess/get", $data);
+    $app->view->add("guess/post", $data);
     $app->page->render($data);
 });
